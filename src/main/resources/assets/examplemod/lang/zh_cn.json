@@ -1,5 +1,7 @@
 {
   "item.examplemod.example_item": "实例物品",
   "item.examplemod.example_item2": "实例物品2",
-  "itemGroup.example_group": "实例分类"
+  "itemGroup.example_group": "实例分类",
+  "item.examplemod.example_food": "实例食物",
+  "item.examplemod.example_sword": "实例剑"
 }
