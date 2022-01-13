@@ -3,5 +3,7 @@
   "item.examplemod.example_item2": "实例物品2",
   "itemGroup.example_group": "实例分类",
   "item.examplemod.example_food": "实例食物",
-  "item.examplemod.example_sword": "实例剑"
+  "item.examplemod.example_sword": "实例剑",
+  "item.examplemod.example_axe": "实例斧",
+  "item.examplemod.example_pickaxe": "实例镐"
 }
