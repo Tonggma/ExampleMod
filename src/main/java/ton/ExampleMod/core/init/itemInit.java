@@ -4,13 +4,12 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import ton.ExampleMod.ExampleMod;
 import ton.ExampleMod.common.armor.exampleArmorMaterial;
-import ton.ExampleMod.common.armor.exampleChest;
+import ton.ExampleMod.common.armor.exampleChestplate;
 import ton.ExampleMod.common.armor.exampleHelmet;
 import ton.ExampleMod.common.food.exampleFood;
 import ton.ExampleMod.common.item.exampleItem;
@@ -51,17 +50,17 @@ public class itemInit {
     public static final RegistryObject<exampleHelmet> EXAMPLE_HELMET =
             ITEMS.register("example_helmet", exampleHelmet::new);
 
-    public static final RegistryObject<exampleChest> EXAMPLE_CHEST =
-            ITEMS.register("example_chest", exampleChest::new);
+    public static final RegistryObject<exampleChestplate> EXAMPLE_CHEST =
+            ITEMS.register("example_chest", exampleChestplate::new);
 
-    public static final RegistryObject<Item> EXAMPLE_LEGGING =
-            ITEMS.register("example_legging",
+    public static final RegistryObject<Item> EXAMPLE_LEGGINGS =
+            ITEMS.register("example_leggings",
                     ()-> new ArmorItem(exampleArmorMaterial.EXAMPLE,
                             EquipmentSlotType.LEGS,
                             new Item.Properties().group(exampleGroup.exampleGroup)));
 
-    public static final RegistryObject<Item> EXAMPLE_FEET =
-            ITEMS.register("example_feet",
+    public static final RegistryObject<Item> EXAMPLE_BOOTS =
+            ITEMS.register("example_boots",
                     ()-> new ArmorItem(exampleArmorMaterial.EXAMPLE,
                             EquipmentSlotType.FEET,
                             new Item.Properties().group(exampleGroup.exampleGroup)));

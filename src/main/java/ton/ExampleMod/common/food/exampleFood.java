@@ -10,11 +10,11 @@ import ton.ExampleMod.core.itemgroup.exampleGroup;
 public class exampleFood extends Item {
 
     private static final Food food = (new Food.Builder())
-            .hunger(5)
-            .saturation(3)
-            .effect(()-> new EffectInstance(Effects.HEALTH_BOOST, 3*20, 2),1)
-            .build();
+            .hunger(5) //增加的饱食度(鸡腿)
+            .saturation(3) //饱腹度
+            .effect(()-> new EffectInstance(Effects.HEALTH_BOOST, 3*20, 2),1) //药水效果
+            .build(); //.build用于创建，必写
     public exampleFood() {
         super(new Properties().group(exampleGroup.exampleGroup).food(food));
     }
-}
+} //添加到exampleGroup

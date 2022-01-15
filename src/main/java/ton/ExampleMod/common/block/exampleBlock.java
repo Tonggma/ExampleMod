@@ -8,3 +8,5 @@ public class exampleBlock extends Block {
         super(Properties.create(Material.ROCK).hardnessAndResistance(1.5f, 10f));
     }
 }
+//创建一个新方块(依据原版石头)
+//hardnessAndResistance()参数为原版石头，可手动填充，算法参考原版

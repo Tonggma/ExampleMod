@@ -8,3 +8,4 @@ public class exampleAxe extends AxeItem {
         super(exampleTier.EXAMPLETIER,15, -3.2F, new Properties().group(exampleGroup.exampleGroup));
     }
 }
+//创建一个斧头

@@ -9,3 +9,4 @@ public class exampleHelmet extends ArmorItem {
         super(exampleArmorMaterial.EXAMPLE, EquipmentSlotType.HEAD, new Properties().group(exampleGroup.exampleGroup));
     }
 }
+//创建一个头盔
