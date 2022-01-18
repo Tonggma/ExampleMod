@@ -15,6 +15,7 @@ import ton.ExampleMod.common.food.exampleFood;
 import ton.ExampleMod.common.item.exampleItem;
 import ton.ExampleMod.common.item.exampleItem2;
 import ton.ExampleMod.common.item.exampleItem3;
+import ton.ExampleMod.common.item.magicIngot;
 import ton.ExampleMod.common.tools.exampleAxe;
 import ton.ExampleMod.common.tools.examplePickaxe;
 import ton.ExampleMod.common.tools.exampleSword;
@@ -31,6 +32,9 @@ public class itemInit {
 
     public static final RegistryObject<exampleItem3> EXAMPLE_ITEM3 =
             ITEMS.register("example_item3", exampleItem3::new);
+
+    public static final RegistryObject<magicIngot> MAGIC_INGOT =
+            ITEMS.register("magic_ingot", magicIngot::new);
 
     public static final RegistryObject<BlockItem> EXAMPLE_BLOCK =
             ITEMS.register("example_block", ()-> new BlockItem(blockInit.EXAMPLE_BLOCK.get(), new Item.Properties().group(exampleGroup.exampleGroup)));

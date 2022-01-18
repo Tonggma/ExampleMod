@@ -13,11 +13,11 @@ import ton.ExampleMod.core.init.itemInit;
 import java.util.function.Supplier;
 
 public enum exampleArmorMaterial implements IArmorMaterial {
-    EXAMPLE("EXAMPLE", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
+    EXAMPLE("example", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
         return Ingredient.fromItems(itemInit.EXAMPLE_ITEM.get()); //返回值为修复材料，应使用get()方法
     });
-    //依据原版下界合金属性创建一个ArmorMaterial类，用于新建装备
 
+    //依据原版下界合金属性创建一个ArmorMaterial类，用于新建装备
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
     private final String name; //名字 -> 渲染有关
     private final int maxDamageFactor; //耐久相关
