@@ -5,9 +5,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import ton.ExampleMod.core.init.blockInit;
-import ton.ExampleMod.core.init.enchantmentInit;
-import ton.ExampleMod.core.init.itemInit;
+import ton.ExampleMod.core.init.*;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ExampleMod.MODID)
@@ -24,5 +22,7 @@ public class ExampleMod {
         itemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         blockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         enchantmentInit.ENCHANTMENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        effectInit.EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        potionInit.POTION_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }
