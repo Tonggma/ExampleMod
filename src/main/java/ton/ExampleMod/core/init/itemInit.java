@@ -12,10 +12,7 @@ import ton.ExampleMod.common.armor.exampleArmorMaterial;
 import ton.ExampleMod.common.armor.exampleChestplate;
 import ton.ExampleMod.common.armor.exampleHelmet;
 import ton.ExampleMod.common.food.exampleFood;
-import ton.ExampleMod.common.item.exampleItem;
-import ton.ExampleMod.common.item.exampleItem2;
-import ton.ExampleMod.common.item.exampleItem3;
-import ton.ExampleMod.common.item.magicIngot;
+import ton.ExampleMod.common.item.*;
 import ton.ExampleMod.common.tools.exampleAxe;
 import ton.ExampleMod.common.tools.examplePickaxe;
 import ton.ExampleMod.common.tools.exampleSword;
@@ -68,4 +65,7 @@ public class itemInit {
                     ()-> new ArmorItem(exampleArmorMaterial.EXAMPLE,
                             EquipmentSlotType.FEET,
                             new Item.Properties().group(exampleGroup.exampleGroup)));
+
+    public static final  RegistryObject<infiniteSnowball> INFINITE_SNOWBALL =
+            ITEMS.register("infinite_snowball", infiniteSnowball::new);
 }
