@@ -1,18 +1,16 @@
 package ton.ExampleMod.common.tools;
 
 import net.minecraft.item.IItemTier;
-import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
-import ton.ExampleMod.common.item.exampleItem3;
-import ton.ExampleMod.core.init.itemInit;
+import ton.ExampleMod.core.init.ItemInit;
 
 import java.util.function.Supplier;
 
 
-public enum exampleTier implements IItemTier {
+public enum ExampleTier implements IItemTier {
     EXAMPLETIER(4, 3023, 9.0F, 0, 15, () -> {
-        return Ingredient.fromItems(itemInit.EXAMPLE_ITEM.get());
+        return Ingredient.fromItems(ItemInit.EXAMPLE_ITEM.get());
     });
 
 
@@ -23,7 +21,7 @@ public enum exampleTier implements IItemTier {
     private final int enchantability; //附魔亲和度
     private final LazyValue<Ingredient> repairMaterial; //修复材料
 
-    private exampleTier(int harvestLevelIn, int maxUsesIn, float efficiencyIn, float attackDamageIn, int enchantabilityIn, Supplier<Ingredient> repairMaterialIn) {
+    private ExampleTier(int harvestLevelIn, int maxUsesIn, float efficiencyIn, float attackDamageIn, int enchantabilityIn, Supplier<Ingredient> repairMaterialIn) {
         this.harvestLevel = harvestLevelIn;
         this.maxUses = maxUsesIn;
         this.efficiency = efficiencyIn;

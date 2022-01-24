@@ -8,13 +8,13 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import ton.ExampleMod.core.init.itemInit;
+import ton.ExampleMod.core.init.ItemInit;
 
 import java.util.function.Supplier;
 
-public enum exampleArmorMaterial implements IArmorMaterial {
+public enum ExampleArmorMaterial implements IArmorMaterial {
     EXAMPLE("example", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> {
-        return Ingredient.fromItems(itemInit.EXAMPLE_ITEM.get()); //返回值为修复材料，应使用get()方法
+        return Ingredient.fromItems(ItemInit.EXAMPLE_ITEM.get()); //返回值为修复材料，应使用get()方法
     });
 
     //依据原版下界合金属性创建一个ArmorMaterial类，用于新建装备
@@ -28,7 +28,7 @@ public enum exampleArmorMaterial implements IArmorMaterial {
     private final float knockbackResistance; //击退抗性
     private final LazyValue<Ingredient> repairMaterial; //修复材料
 
-    private exampleArmorMaterial(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantability, SoundEvent soundEvent, float toughness, float knockbackResistance, Supplier<Ingredient> repairMaterial) {
+    private ExampleArmorMaterial(String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantability, SoundEvent soundEvent, float toughness, float knockbackResistance, Supplier<Ingredient> repairMaterial) {
         this.name = name;
         this.maxDamageFactor = maxDamageFactor;
         this.damageReductionAmountArray = damageReductionAmountArray;

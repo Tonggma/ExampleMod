@@ -7,7 +7,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import ton.ExampleMod.ExampleMod;
-import ton.ExampleMod.core.init.itemInit;
+import ton.ExampleMod.core.init.ItemInit;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 
@@ -15,7 +15,7 @@ public class PropertyRegistry {
     @SubscribeEvent
     public static void propertyOverrideRegistry(FMLClientSetupEvent event) {
         event.enqueueWork(()->{
-            ItemModelsProperties.registerProperty(itemInit.MAGIC_INGOT.get(),
+            ItemModelsProperties.registerProperty(ItemInit.MAGIC_INGOT.get(),
                     new ResourceLocation(ExampleMod.MODID, "size"),
                     (itemStack, clientWorld, livingEntity)-> itemStack.getCount());
         });

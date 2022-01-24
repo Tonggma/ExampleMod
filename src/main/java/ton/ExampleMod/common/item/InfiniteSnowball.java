@@ -6,13 +6,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
-import ton.ExampleMod.core.itemgroup.exampleGroup;
+import ton.ExampleMod.core.itemgroup.ExampleGroup;
 
 import java.util.Random;
 
-public class infiniteSnowball extends Item {
-    public infiniteSnowball() {
-        super(new Properties().group(exampleGroup.exampleGroup));
+public class InfiniteSnowball extends Item {
+    public InfiniteSnowball() {
+        super(new Properties().group(ExampleGroup.exampleGroup));
     }
 
     @Override

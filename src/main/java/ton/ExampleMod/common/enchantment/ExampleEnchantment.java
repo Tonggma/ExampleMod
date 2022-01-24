@@ -4,12 +4,10 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 
-public class exampleEnchantment extends Enchantment {
+public class ExampleEnchantment extends Enchantment {
     private static final EquipmentSlotType[] MAINHAND = new EquipmentSlotType[] {EquipmentSlotType.MAINHAND};
-    public exampleEnchantment() {
+    public ExampleEnchantment() {
         super(Rarity.COMMON, EnchantmentType.WEAPON, MAINHAND);
     }
 
