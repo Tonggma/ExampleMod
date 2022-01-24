@@ -2,8 +2,8 @@ package ton.ExampleMod.common.item;
 
 import net.minecraft.item.Item;
 
-public class exampleItem2 extends Item {
-    public exampleItem2 (Properties properties) {
+public class ExampleItem extends Item {
+    public ExampleItem(Properties properties) {
         super(properties);
     }
 }

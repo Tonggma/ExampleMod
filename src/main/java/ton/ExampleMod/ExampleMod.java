@@ -19,10 +19,11 @@ public class ExampleMod {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        itemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        blockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        enchantmentInit.ENCHANTMENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        effectInit.EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        potionInit.POTION_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        EnchantmentInit.ENCHANTMENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        EffectInit.EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        PotionInit.POTION_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        EntityInit.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }
