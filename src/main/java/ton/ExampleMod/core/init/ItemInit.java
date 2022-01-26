@@ -15,6 +15,7 @@ import ton.ExampleMod.common.food.ExampleFood;
 import ton.ExampleMod.common.item.*;
 import ton.ExampleMod.common.tools.ExampleAxe;
 import ton.ExampleMod.common.tools.ExamplePickaxe;
+import ton.ExampleMod.common.tools.ExampleSuperSword;
 import ton.ExampleMod.common.tools.ExampleSword;
 import ton.ExampleMod.core.itemgroup.ExampleGroup;
 
@@ -66,6 +67,12 @@ public class ItemInit {
                             EquipmentSlotType.FEET,
                             new Item.Properties().group(ExampleGroup.exampleGroup)));
 
-    public static final  RegistryObject<InfiniteSnowball> INFINITE_SNOWBALL =
+    public static final RegistryObject<InfiniteSnowball> INFINITE_SNOWBALL =
             ITEMS.register("infinite_snowball", InfiniteSnowball::new);
+
+    public static final RegistryObject<TNTLauncher> TNT_LAUNCHER =
+            ITEMS.register("tnt_launcher", TNTLauncher::new);
+
+    public static final RegistryObject<ExampleSuperSword> EXAMPLE_SUPER_SWORD =
+            ITEMS.register("example_super_sword", ExampleSuperSword::new);
 }
