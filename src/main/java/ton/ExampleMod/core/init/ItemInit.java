@@ -1,9 +1,9 @@
 package ton.ExampleMod.core.init;
 
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
+import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -11,6 +11,7 @@ import ton.ExampleMod.ExampleMod;
 import ton.ExampleMod.common.armor.ExampleArmorMaterial;
 import ton.ExampleMod.common.armor.ExampleChestplate;
 import ton.ExampleMod.common.armor.ExampleHelmet;
+import ton.ExampleMod.common.entity.ExampleEntity;
 import ton.ExampleMod.common.food.ExampleFood;
 import ton.ExampleMod.common.item.*;
 import ton.ExampleMod.common.tools.ExampleAxe;
@@ -75,4 +76,9 @@ public class ItemInit {
 
     public static final RegistryObject<ExampleSuperSword> EXAMPLE_SUPER_SWORD =
             ITEMS.register("example_super_sword", ExampleSuperSword::new);
+
+    public static final RegistryObject<Item> EXAMPLE_ENTITY_EGG =
+            ITEMS.register("example_entity_egg",
+                    ()->new SpawnEggItem(ExampleEntity.TYPE, 803406, 11063436,
+                            new Item.Properties().group(ExampleGroup.exampleGroup)));
 }
