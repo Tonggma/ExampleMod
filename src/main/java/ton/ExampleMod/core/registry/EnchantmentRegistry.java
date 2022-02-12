@@ -16,7 +16,7 @@ import ton.ExampleMod.core.init.EnchantmentInit;
 public class EnchantmentRegistry {
     @SubscribeEvent
     public static void onLivingDeath(LivingDeathEvent event) { //监听实体死亡事件
-        Entity source = event.getSource().getImmediateSource(); //获取造成伤害的实体(玩家)
+        Entity source = event.getSource().getImmediateSource(); //获取被造成伤害的实体(玩家)
         if(source instanceof PlayerEntity) { //判定source是否为PlayerEntity类
             PlayerEntity player = (PlayerEntity) source; //声明玩家
             ItemStack heldItem = player.getHeldItemMainhand(); //获取物品栏中主手物品

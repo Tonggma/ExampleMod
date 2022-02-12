@@ -1,10 +1,12 @@
 package ton.ExampleMod;
 
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ton.ExampleMod.core.event.EntitySpawnEvent;
 import ton.ExampleMod.core.init.*;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -25,5 +27,7 @@ public class ExampleMod {
         EffectInit.EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
         PotionInit.POTION_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         EntityInit.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
+
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, EntitySpawnEvent::BiomeLoading);
     }
 }
